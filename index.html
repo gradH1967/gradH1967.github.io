@@ -1,0 +1,462 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=shift_jis" />
+<title>MRI_Notes</title>
+<style type="text/css">
+<!--
+.style1 {color: #FFFFFF}
+-->
+</style>
+<link href="tamura_lab.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+body {
+	background-color: #000000;
+}
+.style12 {font-size: 10px}
+
+-->
+</style>
+<link rel="shortcut icon" href="http://www.nidi.med.tohoku.ac.jp/webMathematica/MRI_Notes/images/favicon.ico" type="image/vnd.microsoft.icon"/>
+</head>
+
+<body>
+<table width="700" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="90"><a name="top"></a><img src="images/MRIbanner.jpg" alt="tilte_banner" name="banner_graphic" width="700" height="90" id="banner_graphic" style="background-color: #006600" /></td>
+  </tr>
+  <tr>
+    <td height="30" align="center" bgcolor="#000000"><p class="style1"><a href="http://www.tohoku.ac.jp/japanese/" class="navigation1">東北大学</a> <a href="http://www.med.tohoku.ac.jp/" class="navigation1">医学部・医学系研究科</a> <a href="http://www.med.tohoku.ac.jp/org/health/index.html" class="navigation1">保健学専攻</a> <a href="http://www.med.tohoku.ac.jp/org/health/159/index.html" class="navigation1">医用物理学分野</a> <a href="http://www.noninvasive.med.tohoku.ac.jp/TamuraLab/index00.html" class="navigation1">田村研究室 </a><a href="http://www.noninvasive.med.tohoku.ac.jp/TamuraLab/menuMRI.html" class="navigation1">MRI </a><a href="indexE.html" class="navigation1">English </a></p></td></tr>
+  <tr><td height="30" align="center" valign="middle" bgcolor="#000000"><a href="#see0" class="navigationbold2">&gt;&gt; MRIノート ( MRI便利帳 )　</a><a href="#see1" class="navigation1">撮像シーケンスと信号強度</a><a href="#see2" class="navigation1">Null Point</a><a href="#see3" class="navigation1">Black Blood</a><a href="#see4" class="navigation1">プラークイメージング</a></td>
+  </tr>
+ <tr><td height="30" align="left" bgcolor="#000000"><a href="#see5" class="navigation1">脳イメージング</a><a href="#see6" class="navigation1">脳組織酸素供給モデル</a>  </td>
+  </tr>
+  <tr>
+    <td height="70" align="left" bgcolor="#000000">
+<p>
+<span class="style6">お知らせ: 　幸いにも、このウエブサイト (MRIノート) は2014年3月末までは維持できることになりました。その後は代わりとなるサイトを考えておりますが、決まりましたらお知らせしたいと思います。<br/><br/>2012年1月3日 生長会府中病院放射線科 北 美保 先生のご厚意により、Null Pointの項にSPAIR併用拡散強調画像のページが追加されました。
+</span><br/>
+</p>
+</td>
+  </tr>
+</table>
+<table width="700" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="24"><img src="images/body_main_greenheader.gif" alt="header_banner" width="700" height="25" /></td>
+  </tr>
+</table>
+
+<table width="700" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="700"  height="26" align="center" valign="bottom" bgcolor="#208633"><a name="see0"></a><span class="style10">MRI便利帳</span></td>
+
+  </tr>
+</table>
+<table width="700" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="30"  height="46" align="left" valign="middle" bgcolor="#208633"></td>
+	<td width="670"  height="46" align="left" valign="middle" bgcolor="#208633"><span class="style8">下のリンクをクリックすると現れるページの中には、キーボートからの入力が必要なものがあります。その場合、指示に従って入力後、そのページの下の方にある&quot;Evaluate&quot;ボタンを押して下さい。
+なお、処理に時間がかかる場合があります。(もし時間切れのエラーの表示が出た場合には、もう一度&quot;Evaluate&quot;ボタンを押して下さい。)</span></td>
+
+  </tr>
+</table>
+<table width="700" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="300" align="center" valign="top" bgcolor="#006633"><span class="style1"><a href="Larmorfreq00.jsp" class="navigation">ラーモア周波数</a></span></td>
+    <td width="50" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+    <td width="300" align="center" valign="top" bgcolor="#006633"><span class="style1"><a href="ernstangle03.jsp" class="navigation">Ernst角</a></span></td>
+	<td width="50" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+  </tr>
+</table>
+<table width="700" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="50" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+	<td width="300" align="left" valign="top" bgcolor="#006633"><span class="style1 style8">任意の磁場強度での陽子のラーモア周波数を求めます。</span></td>
+    
+    <td width="50" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+	<td width="300" align="left" valign="top" bgcolor="#006633"><span class="style8">T1とTRを与えてエルンスト角を求めます。</span> </td>
+  </tr>
+</table>
+<table width="700" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="350" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+	
+        <td width="50" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+	<td width="300" align="left" valign="top" bgcolor="#006633"><span class="style1">
+ <a href="ernstangle04.jsp" class="navigation2"> エルンスト角とT1を与えてTRを知りたい場合は このリンク をクリックしてください。</a></span></td>
+  </tr>
+</table>
+
+<table width="700" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="300" align="center" valign="top" bgcolor="#006633"><span class="style1"><a href="IRmagnetization01.jsp" class="navigation0">縦磁化回復曲線</a></span></td>
+    <td width="50" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+    <td width="300" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+    <td width="50" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+  </tr>
+</table>
+<table width="700" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="50" align="center" valign="top" bgcolor="#006633"><span class="style8"></span></td>
+	<td width="300" align="left" valign="top" bgcolor="#006633"><span class="style8">RFパルス照射後に、縦磁化が時間とともに回復する様子を表示します。</span></td>
+    
+    <td width="50" align="center" valign="top" bgcolor="#006633"><span class="style8"></span></td>
+	<td width="300" align="center" valign="top" bgcolor="#006633"><span class="style8"></span></td>
+  </tr>
+</table>
+
+<table width="700" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="300" align="center" valign="top" bgcolor="#006633"><span class="style1"><a href="b0aroundvein052.jsp" class="navigation0">血管近傍磁場強度分布</a></span></td>
+    <td width="50" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+    <td width="300" align="center" valign="top" bgcolor="#006633"><span class="style1"><a href="b0aroundvein00.jsp" class="navigation0">血管近傍磁場強度分布 (2)</a></span></td>
+    <td width="50" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+  </tr>
+</table>
+<table width="700" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="50" align="center" valign="top" bgcolor="#006633"><span class="style8"></span></td>
+	<td width="300" align="left" valign="top" bgcolor="#006633"><span class="style8">血管の磁場に対する傾きや、血液の酸素飽和度、ヘマトクリットを与えて、血管周囲の磁場強度分布を表示することができます。susceptibility weighted imagnig (SWI) など、血管とその周囲の磁化率効果が問題となる場合を考えるときの参考になります。</span></td>
+    
+    <td width="50" align="center" valign="top" bgcolor="#006633"><span class="style8"></span></td>
+	<td width="300" align="left" valign="top" bgcolor="#006633"><span class="style8">左と同じですが、3Dプロットで表示します。表示に少し時間がかかります。</span></td>
+  </tr>
+</table>
+
+<table width="700" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="300" align="center" valign="top" bgcolor="#006633"><span class="style1"><a href="b0aroundvein07.jsp" class="navigation0">血管近傍位相分布</a></span></td>
+    <td width="50" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+    <td width="300" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+    <td width="50" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+  </tr>
+</table>
+<table width="700" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="50" align="center" valign="top" bgcolor="#006633"><span class="style8"></span></td>
+	<td width="300" align="left" valign="top" bgcolor="#006633"><span class="style8">上の磁場強度分布を位相の変化に換算して表示します。</span></td>
+    
+    <td width="50" align="center" valign="top" bgcolor="#006633"><span class="style8"></span></td>
+	<td width="300" align="center" valign="top" bgcolor="#006633"><span class="style8"></span></td>
+  </tr>
+</table>
+<table width="700" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="350" height="12" align="center" valign="top" bgcolor="#006633"><span class="style1"> </span></td>
+	<td width="350" align="center" valign="top" bgcolor="#006633"><span class="style1"> </span></td>
+  </tr>
+</table>
+
+<table width="700" border="0" cellspacing="0" cellpadding="0">
+	<tr><td height=3></td></tr>
+	  <tr>
+		<td width="622"  height="36" align="center" valign="bottom" bgcolor="#208633"><a name="see1"></a><span class="style10">撮像シーケンスと信号強度</span></td>
+		<td width="78" align="center" valign="bottom" bgcolor="#208633"><span class="style1"><a href="#top" class="navigation4">このページのトップへ↑</a></span></td>
+  </tr>
+</table>
+<table width="700" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="700"  height="34" align="center" valign="middle" bgcolor="#208633"><span class="style8">撮像パラメータを様々に変えた時の信号強度をT1の関数として図示します。</span></td>
+
+  </tr>
+</table>
+
+<table width="700" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="300" align="center" valign="top" bgcolor="#006633"><span class="style1"><a href="SEintensity00.jsp" class="navigation">スピンエコー法</a></span></td>
+    <td width="50" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+    <td width="300" align="center" valign="top" bgcolor="#006633"><span class="style1"><a href="GREintensity00.jsp" class="navigation0">グラディエントエコー法</a></span></td>
+	<td width="50" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+  </tr>
+</table>
+<table width="700" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="300" height="35" align="center" valign="top" bgcolor="#006633"><span class="style1"><a href="FSEintensity00.jsp" class="navigation">高速スピンエコー法</a></span></td>
+    <td width="50" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+    <td width="300" align="center" valign="top" bgcolor="#006633"><span class="style1"><a href="SSFPintensity00.jsp" class="navigation">SSFP</a></span></td>
+	<td width="50" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+  </tr>
+</table>
+<table width="700" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="300" align="center" valign="top" bgcolor="#006633"><span class="style1"><a href="IRSEintensity01.jsp" class="navigation0">スピンエコーを用いた反転回復法</a></span></td>
+    <td width="50" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+    <td width="300" align="center" valign="top" bgcolor="#006633"><span class="style1"><a href="MPRAGEintensity00.jsp" class="navigation">MPRAGE</a></span></td>
+	<td width="50" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+  </tr>
+</table>
+<table width="700" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="300" align="center" valign="top" bgcolor="#006633"><span class="style1"><a href="IR-FSEintensity00.jsp" class="navigation0">高速スピンエコーを用いた反転回復法</a></span></td>
+    <td width="50" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+    <td width="300" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+	<td width="50" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+  </tr>
+</table>
+
+<table width="700" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="350" height="10" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+	<td width="350" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+  </tr>
+</table>
+
+<table width="700" border="0" cellspacing="0" cellpadding="0">
+	<tr><td height=3></td></tr>
+  <tr>
+    <td width="622" height="36" align="center" valign="bottom" bgcolor="#208633"><a name="see2"></a><span class="style10">Null Point (反転回復法)</span></td>
+ <td width="78" align="center" valign="bottom" bgcolor="#208633"><span class="style1"><a href="#top" class="navigation4">このページのトップへ↑</a></span></td>
+  </tr>
+</table>
+<table width="700" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="700"  height="34" align="center" valign="middle" bgcolor="#208633"><span class="style8">反転回復法において、繰り返し時間と縦緩和時間などを与えて信号が0となる反転時間を求めます。</span></td>
+
+  </tr>
+</table>
+
+<table width="700" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="300" align="center" valign="top" bgcolor="#006633"><span class="style1"><a href="nullPointIR-SE0.jsp" class="navigation">スピンエコー法</a></span></td>
+    <td width="50" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+    <td width="300" align="center" valign="top" bgcolor="#006633"><span class="style1"><a href="nullPointIR-FSE0.jsp" class="navigation">高速スピンエコー法</a></span></td>
+	<td width="50" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+  </tr>
+</table>
+<table width="700" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="300" height="35" align="center" valign="top" bgcolor="#006633"><span class="style1"><a href="SPAIR02.jsp" class="navigation">SPAIR 併用拡散強調画像</a></span></td>
+    <td width="50" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+    <td width="300" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+	<td width="50" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+  </tr>
+</table>
+<table width="700" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="350" height="10" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+	
+        <td width="50" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+	<td width="300" align="left" valign="top" bgcolor="#006633"><span class="style1">
+ </span></td>
+  </tr>
+</table>
+
+<table width="700" border="0" cellspacing="0" cellpadding="0">
+	<tr><td height=3></td></tr>
+  <tr>
+    <td width="622"  height="36" align="center" valign="bottom" bgcolor="#208633"><a name="see3"></a><span class="style10">Black Blood Imaging</span></td>
+ <td width="78" align="center" valign="bottom" bgcolor="#208633"><span class="style1"><a href="#top" class="navigation4">このページのトップへ↑</a></span></td>
+  </tr>
+</table>
+<table width="700" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="700"  height="34" align="center" valign="middle" bgcolor="#208633"><span class="style8">black blood imaging における信号の特徴を図示します。<br />
+このページは厚生労働科学研究費補助金 (厚生科学基盤研究分野ナノメディシン研究) の助成を受けて作成されたものです。</span></td>
+
+  </tr>
+</table>
+
+<table width="700" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="300" align="center" valign="top" bgcolor="#006633"><span class="style1"><a href="DIRintensity00.jsp" class="navigation">DIR法</a></span></td>
+    <td width="50" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+    <td width="300" align="center" valign="top" bgcolor="#006633"><span class="style1"><a href="QIRintensity00.jsp" class="navigation0">QIR法</a></span></td>
+	<td width="50" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+  </tr>
+</table>
+<table width="700" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="300" align="center" valign="top" bgcolor="#006633"><span class="style1"><a href="MSDEintensity00.jsp" class="navigation">MSDE法</a></span></td>
+    <td width="50" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+    <td width="300" align="center" valign="top" bgcolor="#006633"><span class="style1"><a href="MPRAGEintensity00.jsp" class="navigation">MPRAGE</a></span></td>
+	<td width="50" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+  </tr>
+</table>
+
+
+<table width="700" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="350" height="10" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+	<td width="350" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+  </tr>
+</table>
+
+<table width="700" border="0" cellspacing="0" cellpadding="0">
+	<tr><td height=3></td></tr>
+  <tr>
+    <td width="622"  height="36" align="center" valign="bottom" bgcolor="#208633"><a name="see4"></a><span class="style10">プラークイメージング</span></td>
+ <td width="78" align="center" valign="bottom" bgcolor="#208633"><span class="style1"><a href="#top" class="navigation4">このページのトップへ↑</a></span></td>
+  </tr>
+</table>
+<table width="700" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="700"  height="34" align="center" valign="middle" bgcolor="#208633"><span class="style8">血管壁やプラークの各成分の緩和時間を与えて、撮像パラメータを様々に変えた時の白黒イメージを示します。<br/>
+	このページは厚生労働科学研究費補助金 (厚生科学基盤研究分野ナノメディシン研究) の助成を受けて作成されたものです。</span></td>
+
+  </tr>
+</table>
+
+<table width="700" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="300" align="center" valign="top" bgcolor="#006633"><span class="style1"><a href="PlaqueSEimage01.jsp" class="navigation">(高速)スピンエコー法</a></span></td>
+    <td width="50" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+    <td width="300" align="center" valign="top" bgcolor="#006633"><span class="style1"><a href="PlaqueGREimage01.jsp" class="navigation0">MRA</a></span></td>
+	<td width="50" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+  </tr>
+</table>
+<table width="700" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="300" align="center" valign="top" bgcolor="#006633"><span class="style1"><a href="PlaqueSSFPimage01.jsp" class="navigation">SSFP</a></span></td>
+    <td width="50" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+    <td width="300" align="center" valign="top" bgcolor="#006633"><span class="style1"><a href="PlaqueMPRAGEimage01.jsp" class="navigation">MPRAGE</a></span></td>
+	<td width="50" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+  </tr>
+</table>
+
+
+
+<table width="700" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="350" height="10" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+	<td width="350" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+  </tr>
+</table>
+
+<table width="700" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="350" height="10" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+	<td width="350" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+  </tr>
+</table>
+
+<table width="700" border="0" cellspacing="0" cellpadding="0">
+	<tr><td height=3></td></tr>
+  <tr>
+    <td width="622"  height="36" align="center" valign="bottom" bgcolor="#208633"><a name="see5"></a><span class="style10">脳イメージング</span></td>
+ <td width="78" align="center" valign="bottom" bgcolor="#208633"><span class="style1"><a href="#top" class="navigation4">このページのトップへ↑</a></span></td>
+  </tr>
+</table>
+<table width="700" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="700"  height="34" align="center" valign="middle" bgcolor="#208633"><span class="style8"> 
+脳の各成分の緩和時間などを与えて、撮像パラメータを様々に変えた時の白黒イメージを示します。</span></td>
+
+  </tr>
+</table>
+
+<table width="700" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="300" align="center" valign="top" bgcolor="#006633"><span class="style1"><a href="BrainSEimage01.jsp" class="navigation">(高速)スピンエコー法</a></span></td>
+    <td width="50" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+    <td width="300" align="center" valign="top" bgcolor="#006633"><span class="style1"><a href="BrainGREimage01.jsp" class="navigation0">グラディエントエコー法</a></span></td>
+	<td width="50" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+  </tr>
+</table>
+<table width="700" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="300" align="center" valign="top" bgcolor="#006633"><span class="style1"><a href="BrainFLAIRimage01.jsp" class="navigation">FLAIR</a></span></td>
+    <td width="50" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+    <td width="300" align="center" valign="top" bgcolor="#006633"><span class="style1"><a href="BrainMPRAGEimage01.jsp" class="navigation">MPRAGE</a></span></td>
+	<td width="50" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+  </tr>
+</table>
+<table width="700" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="300" align="center" valign="top" bgcolor="#006633"><span class="style1"><a href="BrainDWI01.jsp" class="navigation0">スピンエコー法による拡散強調画像 (DWI, b = 1000 s/mm2)</a></span></td>
+    <td width="50" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+    <td width="300" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+	<td width="50" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+  </tr>
+</table>
+
+
+<table width="700" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="350" height="10" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+	<td width="350" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+  </tr>
+</table>
+
+<table width="700" border="0" cellspacing="0" cellpadding="0">
+	<tr><td height=3></td></tr>
+  <tr>
+    <td width="622"  height="36" align="center" valign="bottom" bgcolor="#208633"><a name="see6"></a><span class="style10">脳組織酸素供給モデル</span></td>
+ <td width="78" align="center" valign="bottom" bgcolor="#208633"><span class="style1"><a href="#top" class="navigation4">このページのトップへ↑</a></span></td>
+  </tr>
+</table>
+<table width="700" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="700"  height="34" align="center" valign="middle" bgcolor="#208633"><span class="style8"> 
+MRIと直接の関係はありませんが、MRIを考える上で役に立つデータを示します。特に OEF は BOLD 効果と密接な関係があります。<br/>
+このページは<a href="http://kaken.nii.ac.jp/ja/p/21591542"class="navigation1g">科研費 (21591542) </a> の助成を受け作成されたたものです。</span></td>
+
+  </tr>
+</table>
+
+<table width="700" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="300" align="center" valign="middle" bgcolor="#006633"><span class="style1"><a href="TissueO2Model02.jsp" class="navigation0">毛細管内酸素分圧</a></span></td>
+    <td width="50" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+    <td width="300" align="center" valign="top" bgcolor="#006633"><span class="style1"><a href="TissueO2Model03.jsp" class="navigation0">組織酸素濃度とOEF (1)</a></span></td>
+	<td width="50" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+  </tr>
+</table>
+<table width="700" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="50" align="center" valign="top" bgcolor="#006633"><span class="style8"></span></td>
+	<td width="300" align="left" valign="top" bgcolor="#006633"><span class="style8">動脈血酸素分圧、血流量、ヘモグロビン濃度、組織酸素消費量を与えた時に、毛細管内の酸素分圧がどのように変化するかを図示します。</span></td>
+    
+    <td width="50" align="center" valign="top" bgcolor="#006633"><span class="style8"></span></td>
+	<td width="300" align="left" valign="top" bgcolor="#006633"><span class="style8">酸素消費量と動脈血酸素分圧を与えた時に、ヘモグロビン濃度と血流量の変化に対して組織の酸素濃度と OEF がどうなるかを図示します。</span></td>
+  </tr>
+</table>
+<table width="700" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="300" align="center" valign="top" bgcolor="#006633"><span class="style1"><a href="TissueO2Model04.jsp" class="navigation0">組織酸素濃度とOEF (2)</a></span></td>
+    <td width="50" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+    <td width="300" align="center" valign="top" bgcolor="#006633"><span class="style1"><a href="TissueO2Model05.jsp" class="navigation0">組織酸素濃度とOEF (3)</a></span></td>
+	<td width="50" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+  </tr>
+</table>
+<table width="700" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="50" align="center" valign="top" bgcolor="#006633"><span class="style8"></span></td>
+	<td width="300" align="left" valign="top" bgcolor="#006633"><span class="style8">酸素消費量とヘモグロビン濃度を与えた時に、動脈血酸素分圧と血流量の変化に対して組織の酸素濃度と OEF がどうなるかを図示します。</span></td>
+    
+    <td width="50" align="center" valign="top" bgcolor="#006633"><span class="style8"></span></td>
+	<td width="300" align="left" valign="top" bgcolor="#006633"><span class="style8">右の(2)と同じですが、より小さな血流量に対して組織の酸素濃度と OEF がどうなるかを図示します</span></td>
+  </tr>
+</table>
+<table width="700" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="300" align="center" valign="top" bgcolor="#006633"><span class="style1"><a href="TissueO2Model06.jsp" class="navigation0">静脈血と血管内平均酸素濃度 (1)</a></span></td>
+    <td width="50" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+    <td width="300" align="center" valign="top" bgcolor="#006633"><span class="style1"><a href="TissueO2Model07.jsp" class="navigation0">静脈血と血管内平均酸素濃度 (2)</a></span></td>
+	<td width="50" align="center" valign="top" bgcolor="#006633"><span class="style1"></span></td>
+  </tr>
+</table>
+<table width="700" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="50" align="center" valign="top" bgcolor="#006633"><span class="style8"></span></td>
+	<td width="300" align="left" valign="top" bgcolor="#006633"><span class="style8">酸素消費量とヘモグロビン濃度を与えた時に、動脈血酸素分圧と血流量の変化に対して静脈血の酸素分圧と血管内の平均酸素分圧がどうなるかを図示します。</span></td>
+    
+    <td width="50" align="center" valign="top" bgcolor="#006633"><span class="style8"></span></td>
+	<td width="300" align="left" valign="top" bgcolor="#006633"><span class="style8">右の(1)と同じですが、より小さな血流量に対して静脈血の酸素分圧と血管内の平均酸素分圧がどうなるかを図示します</span></td>
+  </tr>
+</table>
+
+<table width="700" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="350" height="12" align="center" valign="top" bgcolor="#006633"><span class="style1"> </span></td>
+	<td width="350" align="center" valign="top" bgcolor="#006633"><span class="style1"> </span></td>
+  </tr>
+</table>
+
+<table width="700" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="24"><img src="images/body_main_greenfooter2.gif" alt="footer_banner" width="700" height="25" /></td>
+  </tr>
+</table>
+</body>
+</html>
