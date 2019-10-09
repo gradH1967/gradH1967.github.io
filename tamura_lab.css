@@ -1,0 +1,269 @@
+/* CSS Document */
+
+p{
+	font-family:"ＭＳＰゴシック", Osaka, "ヒラギノ角ゴ Pro W3";
+	font-size: 12px;
+	color: #000000;
+	line-height: 20px;
+	padding: 10px;
+}
+.bold {
+	font-family: "MSPゴシック";
+	font-size: 12px;
+	line-height: 18px;
+	font-weight: bold;
+	color: #119911;
+}
+.bold2 {
+	font-family: "MSPゴシック";
+	font-size: 14px;
+	line-height: 0px;
+	font-weight: bold;
+	color: #11ff33;
+}
+.navigationbold2 {
+	font-family: "MSPゴシック";
+	font-size: 14px;
+	line-height: 0px;
+	font-weight: bold;
+	color: #11ff33;
+	text-decoration: none;
+}
+.navigationbold2:hover {
+	font-family: "MSPゴシック";
+	font-size: 14px;
+	line-height: 0px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+	background-color: #00aa33;
+}
+.navigation0{
+	font-family: "MSPゴシック";
+	font-size: 16px;
+	font-style: normal;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+	background-color: #006633;
+	display: block;
+	padding: 8px;
+	width: 280px;
+}
+
+.navigation0:hover{
+	font-family: "MSPゴシック";
+	font-size: 16px;
+	font-style: normal;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+	background-color: #00aa33;
+	display: block;
+	padding: 8px;
+	width: 280px;
+}
+
+.navigation{
+	font-family: "MSPゴシック";
+	font-size: 16px;
+	font-style: normal;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+	background-color: #006633;
+	display: block;
+	padding: 8px;
+	width: 160px;
+}
+
+.navigation:hover{
+	font-family: "MSPゴシック";
+	font-size: 16px;
+	font-style: normal;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+	background-color: #00aa33;
+	display: block;
+	padding: 8px;
+	width: 160px;
+}
+
+.navigation1{
+	font-family: "MSPゴシック";
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+	background-color: #000000;
+	display: inline;
+	padding: 8px;
+	width: 90px;
+}
+
+.navigation1:hover{
+	font-family: "MSPゴシック";
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+	background-color: #06aa33;
+	display: inline;
+	padding: 8px;
+	width: 90px;
+}
+.navigation1g{
+	font-family: "MSPゴシック";
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	color: #FFFFFF;
+	text-decoration: none;
+	display: inline;
+	padding: 8px;
+	width: 90px;
+}
+
+.navigation1g:hover{
+	font-family: "MSPゴシック";
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	color: #FFFFFF;
+	text-decoration: none;
+	background-color: #06aa33;
+	display: inline;
+	padding: 8px;
+	width: 90px;
+}
+.navigation2 {
+	font-family: "MSPゴシック", "MS PGothic";
+	font-size: 10px;
+	color: #9090FF;
+	text-decoration: none;
+	background-color: #006633;
+	width: 290px;
+	font-style: normal;
+	font-weight: bold;
+	padding: 2px;
+	display:  block;
+	text-align: left;
+}
+.navigation2:hover {
+	font-family: "MSPゴシック", "MS PGothic";
+	font-size: 10px;
+	color: #FFFFFF;
+	text-decoration: none;
+	background-color: #00aa33;
+	width: 290px;
+	font-style: normal;
+	font-weight: bold;
+	padding: 2px;
+	display:  block;
+	text-align: left;
+}
+.navigation3 {
+	font-family: "MSPゴシック", "MS PGothic";
+	font-size: 10px;
+	color: #FFFFFF;
+	text-decoration: none;
+	background-color: #006633;
+	width: 145px;
+	font-style: normal;
+	font-weight: bold;
+	padding: 2px;
+	display:  block;
+	text-align: left;
+}
+.navigation3:hover {
+	font-family: "MSPゴシック", "MS PGothic";
+	font-size: 10px;
+	color: #FFFFFF;
+	text-decoration: none;
+	background-color: #00aa33;
+	width: 145px;
+	font-style: normal;
+	font-weight: bold;
+	padding: 2px;
+	display:  block;
+	text-align: left;
+}
+.navigation4 {
+	font-family: "MSPゴシック", "MS PGothic";
+	font-size: 10px;
+	color: #A0A0FF;
+	text-decoration: none;
+	background-color: #208633;
+	width: 68px;
+	font-style: normal;
+	font-weight: bold;
+	padding: 2px;
+	display:  block;
+	text-align: left;
+}
+.navigation4:hover {
+	font-family: "MSPゴシック", "MS PGothic";
+	font-size: 10px;
+	color: #FFFFFF;
+	text-decoration: none;
+	background-color: #00aa33;
+	width: 68px;
+	font-style: normal;
+	font-weight: bold;
+	padding: 2px;
+	display:  block;
+	text-align: left;
+}
+.style3 {
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #00F;
+}
+.style4 {
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #FF2050;
+}
+.style6 {
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #A0A0FF;
+}
+.style8 {
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #FFFFFF;
+}
+.style10 {
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-size: 20px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: none;
+	color: #FFD0FF;
+}
